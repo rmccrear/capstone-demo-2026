@@ -15,13 +15,13 @@ function App() {
   }
 
   return (
-    <>
+    <div class="container">
       <h1>Potluck Joy</h1>
       <p>You have {meals.length} meals</p>
       <button onClick={handleCheckMeals}>
         Check Meals
       </button>
-    </>
+    </div>
   )
 }
 
