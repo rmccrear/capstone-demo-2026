@@ -11,11 +11,13 @@ function App() {
     const { data, error } = await supabase.from("meals").select()
     console.log(data)
     console.log(error)
+    const largeMeals = data.filter((meal) => meal.serves > 10)
+    console.log(largeMeals)
     setMeals(data)
   }
 
   return (
-    <div class="container">
+    <div className="container">
       <h1>Potluck Joy</h1>
       <p>You have {meals.length} meals</p>
       <button onClick={handleCheckMeals}>
